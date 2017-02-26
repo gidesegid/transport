@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goWithEritreans</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/main-style.css" rel="stylesheet" />
+   
+   <script type="text/javascript" src="/controller/node_modules/angular/angular.js"></script>
+    <script src="https://code.angularjs.org/1.2.28/angular-route.js"></script>
+ 
+   <script type="text/javascript" src="controller/node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="controller/node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+   <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/style2.css"> -->
+    <script type="text/javascript" src="/controller/main.js"></script>
+
+</head>
+
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                   
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- main dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
+                    </a>
+                    <!-- dropdown-messages -->
+                     <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong><span class=" label label-danger">gide</span></strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>computer maintained</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong><span class=" label label-info">huruy</span></strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>computer bought</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong><span class=" label label-success">xxx</span></strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div> get repaired</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-messages -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
+                    </a>
+                    <!-- dropdown tasks -->
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-tasks -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
+                    </a>
+                    <!-- dropdown alerts-->
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-alerts -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                    </a>
+                    <!-- dropdown user-->
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-user -->
+                </li>
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+
+        </nav>
+        <!-- end navbar top -->
+
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="assets/img/user.jpg" alt="">
+                            </div>
+                            <div class="user-info" ng-controller="homePageController">
+                                <div>{{sharedDataUserName[1]}}</div>
+                                <div class="user-text-online">
+                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+                                </div>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    <li class="sidebar-search">
+                        <!-- search section-->
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!--end search section-->
+                    </li>
+                    <li class="">
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i></i>Translation<span class="fa arrow"></span></a>
+
+                        <ul class="nav nav-second-level">
+                            <li class="selected">
+                                <a href="registerForTranslation.html">Register</a>
+                            </li>
+                            <li>
+                                <a href="translatorTransactions.html">Find Translator</a>
+                            </li>
+                             
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                       <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Transportation<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="transportRegistration.html">Register</a>
+                            </li>
+                            <li>
+                                <a href="transportationFind.html">Find Tranport</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                     <li>
+                        <a href="news.html"><i class="fa fa-flask fa-fw"></i>News</a>
+                    </li>
+                     <li>
+                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
+                    </li>
+                    <li>
+                        <a href="computerMaintenance.html"><i class="fa fa-table fa-fw"></i>Computer Maintenance</a>
+                    </li>
+                    <li>
+                        <a href="thingsToSale.html"><i class="fa fa-edit fa-fw"></i>Things to sale</a>
+                    </li>
+                     <li>
+                        <a href="Cheap Marketing.html"><i class="fa fa-edit fa-fw"></i>Cheap Marketing</a>
+                    </li>
+                     <li>
+                        <a href="notifications.html"><i class="fa fa-edit fa-fw"></i>Notifications</a>
+                    </li>
+                    <li>
+                        <a href="chating.html"><i class="fa fa-edit fa-fw"></i>Chating</a>
+                    </li>
+                     <li>
+                        <a href="tasks.html"><i class="fa fa-edit fa-fw"></i>Tasks</a>
+                    </li>
+                   
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+          <div id="page-wrapper">
+            <div class="row">
+                 <!-- page header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Forms</h1>
+                </div>
+                <!--end page header -->
+            </div>
+            <div class="row" ng-controller="transportAndTranslationContactController">
+                <div class="col-lg-12">
+                    <!-- Form Elements -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Basic Form Elements
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                   Do you have profession ? Yes<input type="checkbox"  ng-model="val" ng-true-value="true" ng-false-value="false"/>&nbsp;&nbsp;<label id="iamtranslator">  I have profession </label>
+                                    <form role="form" ng-hide="val">
+                                          <label>First Name:</label><input type="text" id="firstNameId" placeholder="Firs Name" ng-model="contact.firstNameTranslating" class="form-control" ng-required="false">
+                                          <label>Tele:</label><input type="text" id="teleId" placeholder="Telephone" ng-model="contact.teleTranslating" class="form-control" ng-required="false">
+                                          <label>Email:</label> <input type="Email" id="emailId" placeholder="Email" ng-model="contact.emailTranslating" class="form-control" ng-required="false">
+                                          <label>you live in:</label><select  id="fromCityId" class="form-control" ng-options="city for city in cities | orderBy:city" ng-change="cityFromchoosed()" ng-model="livesIn">
+                                               </select>
+                                                So you are Looking for
+                                            <select  id="transportTypeId" class="form-control" ng-options="professions for professions in workProfessionDatas" ng-change="workProfession()" ng-model="myProfessionDropDown">
+                                            </select>
+                                           <input type="button" ng-model="basicInfo" class="btn btn-primary" value="save" ng-click="basicInfo()">
+                                           <input type="text" ng-model="newContactId" class="form-control">
+                                    </form> 
+                                   
+                                   <form ng-show="val">
+                                      
+                                     <label>First name:</label><input type="text" id="firstNameId" ng-model="translator.firstName" class="form-control" >
+                                       <label>Last Name</label><input type="text" id="lastNameId" ng-model="translator.lastName" class="form-control" >
+                                      <label>Tele:</label><input type="text" id="teleId" ng-model="translator.tele" class="form-control" >
+                                       <label>Email:</label><input type="text" id="emailIdTranslator" ng-model="translator.email" class="form-control">
+                                      <label>Remarks:</label><input type="text" id="remarkId" ng-model="translator.remark" class="form-control">
+                                        <label>I live in:</label><select  id="fromCityId" class="form-control" ng-options="city for city in cities | orderBy:city" ng-change="cityFromchoosed()" ng-model="professionalLivesIn">
+                                               </select>
+                                      <label>profession</label>
+                                        <select  class="form-control" ng-options="professions for professions in workProfessionDatas" ng-change="workProfession()" ng-model="professionalsProfession">
+                                            </select>
+                                               <input type="text" ng-model="professionalId" class="form-control">
+                                            <input type="button" id="submitIdTranslator" value="submit" ng-click="submitTranslator()" class="btn btn-primary">
+
+                                            
+                                    
+                                   </form>
+                                   
+
+                                </div>
+                                <div class="col-lg-6" ng-hide="val">
+                                    <br>
+                                     <div>
+                                               So you are Looking for
+                                            <select  id="transportTypeId" class="form-control" ng-options="professions for professions in workProfessionDatas" ng-change="workProfession()" ng-model="myProfessionDropDown">
+                                            </select>
+                                          
+                                           <div ng-show="myProfessionDropDown=='Translator'">
+                                                <label>Date:</label><input type="Date" id="dateId" placeholder="Date" ng-model="contact.dateTranslating" class="form-control" ng-required="false">
+                                                <label>Time from:</label><input  type="Time" id="timeFromId" placeholder="Time from " ng-model="contact.timeFromTranslating" class="form-control" value="00:00" ng-required="false">
+                                                <label>Time to:</label><input type="Time" id="timeToId" placeholder="Time to" ng-model="contact.timeToTranslating" class="form-control" ng-required="false">
+                                           </div>
+                                            <div ng-show="myProfessionDropDown=='Doctor'">
+                                                <label>Date:</label><input type="Date" id="dateId" placeholder="Date" ng-model="contact.dateTranslating" class="form-control" ng-required="false">
+                                                <label>Time from:</label><input  type="Time" id="timeFromId" placeholder="Time from " ng-model="contact.timeFromTranslating" class="form-control" value="00:00" ng-required="false">
+                                                <label>Time to:</label><input type="Time" id="timeToId" placeholder="Time to" ng-model="contact.timeToTranslating" class="form-control" ng-required="false">
+                                           </div>
+                                          
+                                          </div>
+                                     <label>how many hours does the work takes:</label><input type="text" id="remarkId" placeholder="remarks" ng-model="contact.remarkTranslating" class="form-control" ng-required="false">
+                                  <label>Write your issues here below</label><br>
+                                  <textarea rows="10" cols="50" class="form-control" placeholder="Write your issue here briefly" ng-model="issue"></textarea><br>
+                                   <input type="button" id="submitId" value="submit" ng-click="submitContactTranslation()" class="btn btn-primary">
+                                   
+                                          <input type="checkbox"  ng-model="val2" ng-true-value2="true" ng-false-value2="false"/>&nbsp;&nbsp;<label id="documentLoader">I have document to load for translation </label><br>
+                                        <div action="/documentsForTranslation" method="post" enctype="multipart/form-data" ng-show="val2">
+                                            <input type="file" name="myFile"/>
+                                            <input type="text" name="userId" value="{{sharedDataUserName[0]}}">
+                                            <button type="submit" class="btn btn-primary" id="btnloadDocument">Upload</button>
+                                        </div> 
+                               </div>
+                                <div class="col-lg-6" ng-show="val">
+                                   <br>
+                                   <div>
+                                      <label>profession</label>
+                                            <select  class="form-control" ng-options="professions for professions in workProfessionDatas" ng-change="workProfession()" ng-model="professionalsProfession">
+                                            </select>
+                                      
+                                       <div ng-hide="professionalsProfession=='Translator'">
+                                          <label>your working period is  </label>
+                                          <select class="form-control" ng-options="workTime for workTime in workTimeDatas" ng-change="workTimechanged()" ng-model="myWorkTimeDropDown"></select>
+                                      
+                                      
+                                            <div ng-show="myWorkTimeDropDown=='Job for a month'">
+                                                 <label>from month:</label> <select class="form-control" ng-options="months for months in monthsDatas" ng-model="fromMonth" ng-change="fromMonthSelected()"></select>
+                                                <label>To Month:</label> <select class="form-control" ng-options="months for months in monthsDatas" ng-model="toMonth" ng-change="toMonthSelected()"></select>
+                                            </div>
+                                             <div ng-show="myWorkTimeDropDown==' Job for a days'">
+                                                  <label>From Date</label><input type="date" ng-model="fromDate" class="form-control">
+                                                  <label>To Date</label><input type="date" ng-model="toDate" class="form-control">
+                                             </div>
+                                             <input type="button" ng-model="saveProfession" ng-click="saveProfession()" class="btn btn-primary" value="save">
+                                       </div>
+                                       
+
+                                   </div>
+                                   <div ng-show="professionalsProfession=='Translator'">
+                                      <label>fill the time that you can not help with</label>
+                                       <div>
+                                            <label>Task Name:</label><input type="text" ng-model="taskName" class="form-control">
+                                            <label>Starting Date:</label><input type="date" ng-model="startingDate" class="form-control">
+                                            <label>Starting Time:</label><input type="time" ng-model="startingTime" class="form-control">
+                                            <label>Ending Date:</label><input type="date" ng-model="endingDate" class="form-control"> 
+                                            <label>Ending Time:</label><input type="time" ng-model="endingTime" class="form-control"><br>
+                                            <input type="submit" value="Add" ng-click="submitTask()" class="btn btn-primary"> 
+                                       </div>
+                                   </div>
+                                    <div ng-show="professionalsProfession=='Doctor'">
+                                    <label>fill the time that you can not help with</label>
+                                       <div>
+                                            <label>Task Name:</label><input type="text" ng-model="taskName" class="form-control">
+                                            <label>Starting Date:</label><input type="date" ng-model="startingDate" class="form-control">
+                                            <label>Starting Time:</label><input type="time" ng-model="startingTime" class="form-control">
+                                            <label>Ending Date:</label><input type="date" ng-model="endingDate" class="form-control"> 
+                                            <label>Ending Time:</label><input type="time" ng-model="endingTime" class="form-control"><br>
+                                            <input type="submit" value="Add" ng-click="submitTask()" class="btn btn-primary"> 
+                                       </div>
+                                      
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- End Form Elements -->
+                </div>
+            </div>
+        </div>
+        <!-- end page-wrapper -->
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+   
+      <script src = "controller/script.js"></script>
+      <script src = "controller/jquery.min.js"></script>
+      <script src = "controller/bootstrap.min.js"></script>
+   
+</body>
+
+</html>

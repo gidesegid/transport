@@ -1,0 +1,14 @@
+{
+  "name": "bower transport",
+  "description": "it si bower",
+  "main": "app.js",
+  "authors": [
+    "gide segid"
+  ],
+  "license": "ISC",
+  "homepage": "localhost:3000/",
+  "private": true,
+  "dependencies": {
+    "socket.io-client": "^1.7.2"
+  }
+}

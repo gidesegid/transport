@@ -1,0 +1,33 @@
+body{
+	background-color: grey;
+
+}
+
+header{
+	background-color: #e8b592;
+	height:80px;
+	margin:20px 30px;
+}
+.intro{
+	background-color: #a59494;
+	height:50px;
+	margin:50px 50px;
+	font-size: 40px;
+}
+.tigrignaAtIntroPage{
+	float: right;
+}
+
+ .choices{
+    margin:50px 50px;
+    background-color: #d9a74f;
+ }
+  footer {
+            background-color: #333;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+        }
+        div{
+        	margin:20px 50px;
+        }

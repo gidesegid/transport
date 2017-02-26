@@ -1,0 +1,36 @@
+{
+  "name": "transport",
+  "version": "1.0.0",
+  "description": "transport and translation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gide segid",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.0",
+    "body-parser": "^1.15.2",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.5.2",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "fs": "0.0.2",
+    "md5": "^2.2.1",
+    "mongodb": "*",
+    "mongoose": "^4.7.6",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.2",
+    "node-uuid": "^1.4.7",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "sha1": "^1.1.1",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
+  }
+}

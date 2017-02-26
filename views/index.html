@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goWithEritreans</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/main-style.css" rel="stylesheet" />
+    <!-- Page-Level CSS -->
+    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+      <script type="text/javascript" src="/controller/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="/controller/bootstrap.min.js"></script> -->
+   <script type="text/javascript" src="/controller/angular.min.js"></script> -->
+    <script type="text/javascript" src="/controller/angular-animate.min.js" ></script>
+    <script type="text/javascript" src="/controller/home_script.js"></script>
+    <script type="text/javascript" src="/controller/angularjs-toaster/toaster.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+     <script src = "controller/script.js"></script>
+     
+     <script type="text/javascript" src="controller/node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+      <script type="text/javascript" src="controller/node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+     
+   </head>
+<body>
+    <div ng-view></div>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                   
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+            <ul class="nav navbar-top-links navbar-right" ng-controller="homePageController">
+                <!-- main dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="top-label label label-danger">{{notificationResultOne + notificationResultTwo}}</span><i class="fa fa-envelope fa-3x"></i>
+                    </a>
+                    <!-- dropdown-messages -->
+                    <ul class="dropdown-menu dropdown-messages">
+                      <li ng-repeat="userNotificationMessages in userNotificationMessages"><a href="notifications.html">{{userNotificationMessages.message}}</a></li>
+                    </ul>
+                   <!--  <ul>
+                        <li ng-model="agreementMessage"><a href="notifications.html">{{agreementMessage}}</a></li>
+                    </ul> -->
+                    <!-- end dropdown-messages -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
+                    </a>
+                    <!-- dropdown tasks -->
+                    <ul class="dropdown-menu dropdown-tasks">
+                       
+                       
+                    </ul>
+                    <!-- end dropdown-tasks -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="top-label label label-warning">{{notificationResult}}</span><i class="fa fa-bell fa-3x"></i>
+                    </a>
+                    <!-- dropdown alerts-->
+                    <ul class="dropdown-menu dropdown-alerts">
+                        
+                      <li ng-repeat="userNotificationMessages in userNotificationMessages"><a href="notifications.html">{{userNotificationMessages.message}}</a></li>
+                    
+                    </ul>
+                    <!-- end dropdown-alerts -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                    </a>
+                    <!-- dropdown user-->
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-user -->
+                </li>
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+
+        </nav>
+        <!-- end navbar top -->
+
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <!-- user image section-->
+                        <div class="user-section" ng-controller="homePageController">
+                            <div class="user-section-inner">
+                               <img src="" alt="">
+                            </div>
+                            <div class="user-info">id:{{sharedDataUserName[0]}}
+                                <div ng-model="result">{{sharedDataUserName[1]}}</div>
+                                <div class="user-text-online">
+                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;online
+                                </div>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    <li class="sidebar-search">
+                        <!-- search section-->
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!--end search section-->
+                    </li>
+                    <li class="selected">
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li>
+                            <a href="#"><i class="fa"></i>Translation<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="registerForTranslation.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="translatorTransactions.html">Find Translator</a>
+                                </li>
+                            </ul>
+                            <!-- second-level-items -->
+                    </li>
+                     <li>
+                        <a href="#"><i class="fa fa-fw"></i>Transportation<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="transportRegistration.html">Register</a>
+                            </li>
+                            <li>
+                                <a href="transportationFind.html">Find Tranport</a>
+                            </li>
+
+
+                        </ul>
+
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="news.html"><i class="fa fa-flask fa-fw"></i>News</a>
+                    </li>
+                     <li>
+                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
+                    </li>
+                    <li>
+                        <a href="computerMaintenance.html"><i class="fa fa-table fa-fw"></i>Computer Maintnance</a>
+                    </li>
+                    <li>
+                        <a href="thingsToSale.html"><i class="fa fa-edit fa-fw"></i>Things to sale</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html"><i class="fa fa-edit fa-fw"></i>Notifications</a>
+                    </li>
+                   <li>
+                        <a href="chating.html"><i class="fa fa-edit fa-fw"></i>Chating</a>
+                    </li>
+                     <li>
+                        <a href="tasks.html"><i class="fa fa-edit fa-fw"></i>Tasks</a>
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+            
+            <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                     <h1 class="page-header">Dashboard</h1>
+                     <div class="row">
+                <!-- Welcome -->
+                        <div class="col-lg-12">
+                            <div class="alert alert-info">
+                                <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Gide Segid </b>
+                                <i class="fa  fa-pencil"></i><b>&nbsp;2 </b>messages waiting for you;
+                            </div>
+                        </div>
+                <!--end  Welcome -->
+                </div>
+                   <div class="col-lg-12">
+                       <div class="panel panel-primary">
+                           <div class="panel-heading">
+                                <i></i>choose theme
+                                <div class="pull-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                            Actions
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right" role="menu">
+                                            <li><a href="#">cheap marketing</a>
+                                            </li>
+                                            <li><a href="#">sale and buy things</a>
+                                            </li>
+                                            <li><a href="#">travel</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">translation</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <!--End Page Header -->
+            </div>
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="controller/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <!-- Page-Level Plugin Scripts
+    <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/plugins/morris/morris.js"></script>
+    <script src="assets/scripts/dashboard-demo.js"></script>-->
+   <!--  <script type="text/javascript">
+      var myApp=angular.module('myApp',[]);
+      myApp.controller('mycontroller',function($scope,$http,$window){
+
+        $scope.submit=function(){
+              var username=$scope.username;
+              var password=$scope.password;
+          $http.get('/login/'+username+'/'+password).then(function(response){
+           
+             $scope.result=response.data[0].username;
+             //return console.log(response);
+           
+            
+            if($scope.result==="no"){
+             
+             alert("not memeber")
+            }else{
+                 // $window.location.href = '/index.html';
+             
+            }
+          
+          })
+        }
+
+      })
+    </script> -->
+
+</body>
+
+</html>

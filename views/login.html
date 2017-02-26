@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loging</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+   <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/main-style.css" rel="stylesheet" />
+       <link href="assets/css/main-style.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="/css/loginCss/style.css">
+     <link rel="stylesheet" type="text/css" href="/css/loginCss/bootstrap.css">
+      <script type="text/javascript" src="controller/node_modules/angular/angular.min.js"></script>
+      <script type="text/javascript" src="controller/node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+      <script type="text/javascript" src="controller/node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+      <script type="text/javascript" src="controller/main.js"></script>
+      <script src="https://code.angularjs.org/1.2.28/angular-route.js"></script>
+</head>
+
+<body class="body-Login-back" ng-controller="logincontroller">
+<div ng-view></div>
+    <div class="container">
+        <video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
+            <source src="/css/videos/leif_eliasson--glaciartopp.webm" type="video/webm">
+        </video>
+      
+            <div class="vid-container text-center">
+       
+                   <div class="inner-container">
+                       <div class="box">
+                           <h1>Login</h1>
+                           <div>
+                                <form>
+                                   <div class="form-group">
+                                      
+                                      <input type="text" class="form-control" ng-model="username" name="username" placeholder="Username"></label>
+                                    </div>
+                                    <div class="form-group">
+                                      
+                                      <input type="password" class="form-control" ng-model="password" name="password" placeholder="password"></label>
+                                    </div>
+                                    
+                                    <div>
+                                       <button type="submit" class="btn" ng-click="submitLogin()">Login</button>
+                                    <a href="userRegistration.html">not a member ? please register here</a>
+                                    </div>
+                                   
+                                </form>
+                           </div>
+                        </div>
+                  </div>
+            </div>
+
+     <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="/controller/main.js"></script>
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+ -->
+</body>
+
+</html>
